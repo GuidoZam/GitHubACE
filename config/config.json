@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "git-hub-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/gitHubAce/GitHubAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/gitHubAce/GitHubAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GitHubAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/gitHubAce/loc/{locale}.js"
+  }
+}
