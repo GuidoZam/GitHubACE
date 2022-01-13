@@ -9,9 +9,10 @@
     "test": "gulp test"
   },
   "dependencies": {
+    "@microsoft/sp-adaptive-card-extension-base": "1.13.0",
     "@microsoft/sp-core-library": "1.13.0",
     "@microsoft/sp-property-pane": "1.13.0",
-    "@microsoft/sp-adaptive-card-extension-base": "1.13.0"
+    "@octokit/rest": "^18.12.0"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.13.0",

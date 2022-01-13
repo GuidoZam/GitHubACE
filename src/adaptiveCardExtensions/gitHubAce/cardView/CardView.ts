@@ -26,7 +26,7 @@ export class CardView extends BasePrimaryTextCardView<IGitHubAceAdaptiveCardExte
   public get data(): IPrimaryTextCardParameters {
     return {
       primaryText: strings.PrimaryText,
-      description: this.properties.description
+      description: this.state.userData.login
     };
   }
 

@@ -5,7 +5,7 @@ import { IGitHubAceAdaptiveCardExtensionProps, IGitHubAceAdaptiveCardExtensionSt
 export interface IQuickViewData {
   subTitle: string;
   title: string;
-  description: string;
+  userData: string;
 }
 
 export class QuickView extends BaseAdaptiveCardView<
@@ -17,7 +17,7 @@ export class QuickView extends BaseAdaptiveCardView<
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
-      description: this.properties.description
+      userData: this.state.userData
     };
   }
 

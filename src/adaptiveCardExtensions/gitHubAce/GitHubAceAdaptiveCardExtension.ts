@@ -3,15 +3,16 @@ import { BaseAdaptiveCardExtension } from '@microsoft/sp-adaptive-card-extension
 import { CardView } from './cardView/CardView';
 import { QuickView } from './quickView/QuickView';
 import { GitHubAcePropertyPane } from './GitHubAcePropertyPane';
+import { Octokit } from '@octokit/rest';
 
 export interface IGitHubAceAdaptiveCardExtensionProps {
   title: string;
-  description: string;
   iconProperty: string;
+  apiKey: string;
 }
 
 export interface IGitHubAceAdaptiveCardExtensionState {
-  description: string;
+  userData: any;
 }
 
 const CARD_VIEW_REGISTRY_ID: string = 'GitHubAce_CARD_VIEW';
@@ -23,9 +24,19 @@ export default class GitHubAceAdaptiveCardExtension extends BaseAdaptiveCardExte
 > {
   private _deferredPropertyPane: GitHubAcePropertyPane | undefined;
 
-  public onInit(): Promise<void> {
+  public async onInit(): Promise<void> {
+    let userData: any;
+    if(this.properties.apiKey) {
+      let octokit = new Octokit({
+        auth: this.properties.apiKey
+      });
+
+      userData = await octokit.users.getAuthenticated();
+      console.log(userData.data);
+    }
+
     this.state = {
-      description: this.properties.description
+      userData: userData.data
     };
 
     this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());

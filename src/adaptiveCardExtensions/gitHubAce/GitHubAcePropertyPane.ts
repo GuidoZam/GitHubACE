@@ -17,9 +17,9 @@ export class GitHubAcePropertyPane {
                 PropertyPaneTextField('iconProperty', {
                   label: strings.IconPropertyFieldLabel
                 }),
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel,
-                  multiline: true
+                PropertyPaneTextField('apiKey', {
+                  label: 'API Key',
+                  multiline: false
                 })
               ]
             }
