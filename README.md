@@ -17,7 +17,7 @@ Simple sample of using [octokit/rest](https://github.com/octokit/rest.js) in a S
 
 ## Prerequisites
 
-> A GitHub API Key is required to run this sample.
+A GitHub API Key is required to run this sample.
 For this sample you can use a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with scope "user".
 
 ## Disclaimer
