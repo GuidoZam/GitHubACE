@@ -3,9 +3,7 @@ import * as strings from 'GitHubAceAdaptiveCardExtensionStrings';
 import { IGitHubAceAdaptiveCardExtensionProps, IGitHubAceAdaptiveCardExtensionState } from '../GitHubAceAdaptiveCardExtension';
 
 export interface IQuickViewData {
-  subTitle: string;
-  title: string;
-  userData: string;
+  userData: any;
 }
 
 export class QuickView extends BaseAdaptiveCardView<
@@ -15,9 +13,7 @@ export class QuickView extends BaseAdaptiveCardView<
 > {
   public get data(): IQuickViewData {
     return {
-      subTitle: strings.SubTitle,
-      title: strings.Title,
-      userData: this.state.userData
+      userData: this.state!.userData
     };
   }
 

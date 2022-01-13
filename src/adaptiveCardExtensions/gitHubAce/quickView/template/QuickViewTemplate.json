@@ -1,33 +1,65 @@
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.2",
+  "version": "1.3",
   "body": [
-    {
-      "type": "TextBlock",
-      "weight": "Bolder",
-      "text": "${title}"
-    },
     {
       "type": "ColumnSet",
       "columns": [
         {
           "type": "Column",
           "items": [
+              {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "${userData.avatar_url}",
+                  "size": "Small"
+              }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
             {
               "type": "TextBlock",
               "weight": "Bolder",
-              "text": "${subTitle}",
+              "text": "${userData.login}",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "None",
+              "text": "${userData.company}",
+              "isSubtle": true,
               "wrap": true
             }
-          ]
+          ],
+          "width": "stretch"
         }
       ]
     },
     {
-      "type": "TextBlock",
-      "text": "${userData.company}",
-      "wrap": true
+      "type": "FactSet",
+      "spacing": "large",
+      "facts": [
+        {
+          "title": "followers:",
+          "value": "${formatNumber(userData.followers, 0)}"
+        },
+        {
+          "title": "following:",
+          "value": "${formatNumber(userData.following, 0)}"
+        },
+        {
+          "title": "created:",
+          "value": "${formatDateTime(userData.created_at, 'dd/MM/yyyy')}"
+        },
+        {
+          "title": "public_repos:",
+          "value": "${formatNumber(userData.public_repos, 0)}"
+        }
+      ]
     }
   ]
 }
