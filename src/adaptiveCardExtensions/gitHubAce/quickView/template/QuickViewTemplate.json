@@ -41,22 +41,21 @@
     },
     {
       "type": "FactSet",
-      "spacing": "large",
       "facts": [
         {
-          "title": "followers:",
+          "title": "${strings.QuickViewFollowers}",
           "value": "${formatNumber(userData.followers, 0)}"
         },
         {
-          "title": "following:",
+          "title": "${strings.QuickViewFollowing}",
           "value": "${formatNumber(userData.following, 0)}"
         },
         {
-          "title": "created:",
+          "title": "${strings.QuickViewCreatedDate}",
           "value": "${formatDateTime(userData.created_at, 'dd/MM/yyyy')}"
         },
         {
-          "title": "public_repos:",
+          "title": "${strings.QuickViewPublicRepos}",
           "value": "${formatNumber(userData.public_repos, 0)}"
         }
       ]

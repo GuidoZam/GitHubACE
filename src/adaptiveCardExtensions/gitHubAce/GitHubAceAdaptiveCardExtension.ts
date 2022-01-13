@@ -26,11 +26,15 @@ export default class GitHubAceAdaptiveCardExtension extends BaseAdaptiveCardExte
 
   public async onInit(): Promise<void> {
     let userData: any;
+
+    // If API Key is specified
     if(this.properties.apiKey) {
+      // Create an instance of Octokit
       let octokit = new Octokit({
         auth: this.properties.apiKey
       });
 
+      // Get the authenticated user data
       userData = await octokit.users.getAuthenticated();
       console.log(userData.data);
     }

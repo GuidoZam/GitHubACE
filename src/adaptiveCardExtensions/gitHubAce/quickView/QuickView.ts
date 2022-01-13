@@ -4,6 +4,7 @@ import { IGitHubAceAdaptiveCardExtensionProps, IGitHubAceAdaptiveCardExtensionSt
 
 export interface IQuickViewData {
   userData: any;
+  strings: IGitHubAceAdaptiveCardExtensionStrings;
 }
 
 export class QuickView extends BaseAdaptiveCardView<
@@ -13,7 +14,8 @@ export class QuickView extends BaseAdaptiveCardView<
 > {
   public get data(): IQuickViewData {
     return {
-      userData: this.state!.userData
+      userData: this.state!.userData,
+      strings: strings
     };
   }
 
