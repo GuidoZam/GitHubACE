@@ -36,11 +36,11 @@ export default class GitHubAceAdaptiveCardExtension extends BaseAdaptiveCardExte
 
       // Get the authenticated user data
       userData = await octokit.users.getAuthenticated();
-      console.log(userData.data);
+      console.log(userData?.data);
     }
 
     this.state = {
-      userData: userData.data
+      userData: userData?.data
     };
 
     this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());

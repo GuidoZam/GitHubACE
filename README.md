@@ -4,6 +4,14 @@
 
 Simple sample of using [octokit/rest](https://github.com/octokit/rest.js) in a SharePoint Framework Adaptive Card Extension.
 
+Card View
+
+![Card View](./pictures/CardView.png)
+
+Quick View
+
+![Quick View](./pictures/QuickView.png)
+
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/badge/version-1.13-green.svg)
