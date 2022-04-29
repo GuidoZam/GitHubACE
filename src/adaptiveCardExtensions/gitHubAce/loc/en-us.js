@@ -7,7 +7,7 @@ define([], function() {
     "Title": "Adaptive Card Extension",
     "SubTitle": "Quick View",
     "PrimaryText": "GitHub API ACE",
-    "QuickViewButton": "View Infos",
+    "QuickViewButton": "View Info",
     "QuickViewFollowers": "Followers",
     "QuickViewFollowing": "Following",
     "QuickViewCreatedDate": "Created",

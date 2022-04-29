@@ -6,11 +6,11 @@ Simple sample of using [octokit/rest](https://github.com/octokit/rest.js) in a S
 
 Card View
 
-![Card View](./pictures/CardView.png)
+![Card View](./assets/CardView.png)
 
 Quick View
 
-![Quick View](./pictures/QuickView.png)
+![Quick View](./assets/QuickView.png)
 
 ## Used SharePoint Framework Version
 
